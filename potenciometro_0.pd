@@ -1,0 +1,36 @@
+#N canvas 1017 285 477 365 10;
+#X text 81 84 Inicializar;
+#X obj 130 100 hsl 200 24 0 1 0 0 empty empty potenciometro_0 46 13
+1 14 -262144 -1 -1 0 0;
+#X text 188 84 Deslizador;
+#X obj 127 29 spigot;
+#X obj 100 100 tgl 24 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 60 157 route 0 1;
+#X obj 60 292 s arduino_msg;
+#X msg 60 231 analogIns 0 0;
+#X msg 157 232 analogIns 0 1;
+#X obj 127 158 outlet;
+#X obj 127 7 r arduino_a0;
+#X obj 127 50 average 10;
+#X obj 353 231 delay 1;
+#X msg 289 232 reset 10;
+#X msg 353 258 1;
+#X msg 32 232 0;
+#X connect 1 0 9 0;
+#X connect 3 0 11 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 5 0 15 0;
+#X connect 5 1 8 0;
+#X connect 5 1 13 0;
+#X connect 5 1 12 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 10 0 3 0;
+#X connect 11 0 1 0;
+#X connect 12 0 14 0;
+#X connect 13 0 11 0;
+#X connect 14 0 3 1;
+#X connect 15 0 3 1;
+#X coords 0 -1 1 1 232 24 2 100 100;
