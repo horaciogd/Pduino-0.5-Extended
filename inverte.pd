@@ -1,0 +1,8 @@
+#N canvas 146 430 273 204 12;
+#X obj 4 79 inlet;
+#X obj 4 127 outlet;
+#X obj 4 103 expr 1 - $f1;
+#X text 105 101 inverte;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X coords 0 -1 1 1 64 24 2 100 100;

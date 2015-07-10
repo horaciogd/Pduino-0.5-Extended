@@ -1,0 +1,24 @@
+#N canvas 105 374 477 365 10;
+#X obj 35 61 inlet;
+#X obj 106 73 inlet;
+#X obj 37 215 outlet;
+#X floatatom 237 107 5 0 0 0 - - -;
+#X obj 201 42 loadbang;
+#X text 107 105 maior que este valor;
+#X msg 201 65 0.5;
+#X obj 109 128 hsl 158 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7850 1;
+#X obj 42 123 >=;
+#X obj 36 181 spigot;
+#X obj -34 120 t f f;
+#X connect 0 0 10 0;
+#X connect 1 0 7 0;
+#X connect 3 0 8 1;
+#X connect 4 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 3 0;
+#X connect 8 0 9 1;
+#X connect 9 0 2 0;
+#X connect 10 0 9 0;
+#X connect 10 1 8 0;
+#X coords 0 -1 1 1 182 48 2 100 100;
