@@ -1,4 +1,4 @@
-#N canvas 521 367 659 551 10;
+#N canvas 906 297 659 551 10;
 #X declare -lib mrpeach;
 #X obj 6 5 cnv 15 645 540 empty empty empty 20 12 0 14 -233017 -66577
 0;
@@ -453,8 +453,8 @@
 #X text 6 508 (C) Copyright 2006 Free Software Foundation;
 #N canvas 3 48 451 224 ver 0;
 #X obj 23 7 inlet;
-#X obj 250 100 cnv 15 145 17 empty \$0-version_cnv empty 4 10 0 12
--203904 -1 0;
+#X obj 250 100 cnv 15 145 17 empty \$0-version_cnv Firmata-2.4 4 10
+0 12 -203904 -1 0;
 #X obj 23 157 send \$0-version_cnv;
 #X msg 23 132 label \$1;
 #X obj 48 103 symbol;
@@ -478,8 +478,8 @@
 #X obj 125 296 arduino 1;
 #N canvas 649 518 411 212 firmware 0;
 #X obj 123 2 inlet;
-#X obj 250 100 cnv 15 145 17 empty \$0-firmware_cnv empty 4 10 0 12
--232576 -66577 0;
+#X obj 250 100 cnv 15 145 17 empty \$0-firmware_cnv StandardFirmata.ino-2.4
+4 10 0 12 -232576 -66577 0;
 #X msg 123 156 label \$1;
 #X obj 148 127 symbol;
 #X obj 138 101 loadbang;
