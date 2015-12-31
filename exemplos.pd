@@ -1,4 +1,4 @@
-#N canvas 918 26 656 750 10;
+#N canvas 8 168 748 836 10;
 #X declare -lib mrpeach;
 #X text 146 35 valores de -1 a 1;
 #X obj 30 26 acelerometro;
@@ -6,7 +6,7 @@
 #X floatatom 78 91 5 0 0 0 - - -;
 #X floatatom 126 91 5 0 0 0 - - -;
 #X text 146 35 valores de -1 a 1;
-#X obj 388 92 normaliza;
+#X obj 379 72 normaliza;
 #X obj 29 377 entrada_dixital 7;
 #X obj 29 450 led_r 11;
 #X obj 29 498 led_g 10;
@@ -27,8 +27,6 @@
 #X floatatom 30 248 5 0 0 0 - - -;
 #X floatatom 78 248 5 0 0 0 - - -;
 #X floatatom 126 248 5 0 0 0 - - -;
-#X floatatom 27 666 5 0 0 0 - - -;
-#X text 63 666 valores de 0 a 1;
 #N canvas 970 474 378 159 outros 0;
 #X obj -86 59 route 0 1;
 #X obj 33 54 spigot;
@@ -55,16 +53,30 @@
 #X connect 5 0 0 0;
 #X connect 8 0 10 0;
 #X connect 9 0 8 0;
-#X restore 387 228 pd outros;
-#X text 389 24 obxectos para filtrado;
-#X text 26 698 Lembra activar os obxectos no toggle para poder utilizalos
+#X restore 378 184 pd outros;
+#X text 379 14 obxectos para filtrado;
+#X text 23 773 Lembra activar os obxectos no toggle para poder utilizalos
 e indicar mediante un parámetro o pin de arduino que vas utilizar
 ;
-#X obj 389 54 inverte;
-#X obj 27 635 servo 5;
-#X obj 387 168 maiorque;
-#X obj 389 128 pecha;
+#X obj 379 44 inverte;
+#X obj 414 761 servo 5;
+#X obj 378 131 maiorque;
+#X obj 379 101 pecha;
 #X obj 29 322 entrada_analoxica 0;
+#X obj 378 206 fai_bang;
+#X obj 414 654 velocidad_servo;
+#X floatatom 414 738 5 0 0 0 - - -;
+#X text 450 738 valores de 0 a 1;
+#X obj 419 588 servo 6;
+#X obj 419 423 posiciones_servo;
+#X floatatom 419 566 5 0 0 0 - - -;
+#X text 455 566 valores de 0 a 1;
+#X obj 422 403 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 0;
+#X obj 419 264 metro_servo;
+#X obj 419 307 line_servo;
+#X obj 433 363 line_servo;
+#X obj 433 341 delay 1000;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
 #X connect 1 2 4 0;
@@ -74,5 +86,14 @@ e indicar mediante un parámetro o pin de arduino que vas utilizar
 #X connect 23 0 24 0;
 #X connect 23 1 25 0;
 #X connect 23 2 26 0;
-#X connect 33 0 27 0;
-#X connect 36 0 17 0;
+#X connect 34 0 17 0;
+#X connect 36 0 37 0;
+#X connect 37 0 31 0;
+#X connect 40 0 41 0;
+#X connect 41 0 39 0;
+#X connect 43 0 40 0;
+#X connect 44 0 45 0;
+#X connect 44 0 47 0;
+#X connect 45 0 43 0;
+#X connect 46 0 43 0;
+#X connect 47 0 46 0;

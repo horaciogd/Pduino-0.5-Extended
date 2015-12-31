@@ -1,0 +1,33 @@
+#N canvas 580 370 450 300 10;
+#X obj -64 61 f;
+#X obj 3 0 hsl 80 24 0 1 0 0 empty empty empty -2 -8 0 10 -262144 -1
+-1 2900 1;
+#X obj 88 0 bng 24 250 50 0 empty empty Parada 30 12 1 12 -262144 -1
+-1;
+#X obj -64 157 outlet;
+#X obj -64 90 f;
+#X obj 3 27 hsl 80 24 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2600 1;
+#X obj 88 27 bng 24 250 50 0 empty empty Lento 30 12 1 12 -262144 -1
+-1;
+#X obj -64 117 f;
+#X obj 3 54 hsl 80 24 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1200 1;
+#X obj 88 54 bng 24 250 50 0 empty empty Rápido 30 12 1 12 -262144
+-1 -1;
+#X obj 113 -38 inlet;
+#X obj 151 -38 inlet;
+#X obj 189 -38 inlet;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 3 0;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;
+#X connect 10 0 2 0;
+#X connect 11 0 6 0;
+#X connect 12 0 9 0;
+#X coords 0 -1 1 1 162 78 1 0 0;

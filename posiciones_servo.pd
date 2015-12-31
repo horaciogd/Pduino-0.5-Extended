@@ -1,0 +1,76 @@
+#N canvas 580 370 489 375 10;
+#X obj -72 86 f;
+#X obj 3 27 hsl 80 24 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 88 27 bng 24 250 50 0 empty empty Mínimo 30 12 1 12 -262144
+-1 -1;
+#X obj -72 318 outlet;
+#X obj -72 115 f;
+#X obj 3 54 hsl 80 24 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 88 54 bng 24 250 50 0 empty empty Centro 30 12 1 12 -262144
+-1 -1;
+#X obj -72 142 f;
+#X obj 3 81 hsl 80 24 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 88 81 bng 24 250 50 0 empty empty Máximo 30 12 1 12 -262144
+-1 -1;
+#X obj -47 234 inlet;
+#X obj 3 108 hsl 157 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 3 123 hsl 157 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 15600 1;
+#X obj -45 -34 loadbang;
+#X msg -45 -10 1;
+#X obj 29 163 expr $f1*($f3 - $f2) + $f2;
+#X obj 42 218 expr $f1*($f3 - $f2) + $f2;
+#X obj -47 269 expr $f1*($f3 - $f2) + $f2;
+#X floatatom -45 86 5 0 0 0 - - -;
+#X floatatom -45 115 5 0 0 0 - - -;
+#X floatatom -46 142 5 0 0 0 - - -;
+#X obj 3 0 hsl 80 24 0 1 0 0 empty empty empty -2 -8 0 10 -262144 -1
+-1 0 1;
+#X obj 88 0 bng 24 250 50 0 empty empty Fuera 30 12 1 12 -262144 -1
+-1;
+#X obj -72 62 f;
+#X floatatom -45 62 5 0 0 0 - - -;
+#X msg 260 33 0;
+#X msg 295 33 1;
+#X msg 269 -4 bang;
+#X connect 0 0 3 0;
+#X connect 0 0 15 1;
+#X connect 0 0 16 1;
+#X connect 0 0 18 0;
+#X connect 1 0 0 0;
+#X connect 1 0 27 0;
+#X connect 2 0 0 0;
+#X connect 4 0 3 0;
+#X connect 4 0 19 0;
+#X connect 5 0 4 0;
+#X connect 5 0 27 0;
+#X connect 6 0 4 0;
+#X connect 7 0 3 0;
+#X connect 7 0 15 2;
+#X connect 7 0 16 2;
+#X connect 7 0 20 0;
+#X connect 8 0 7 0;
+#X connect 8 0 27 0;
+#X connect 9 0 7 0;
+#X connect 10 0 17 0;
+#X connect 11 0 15 0;
+#X connect 12 0 16 0;
+#X connect 13 0 14 0;
+#X connect 14 0 12 0;
+#X connect 15 0 17 1;
+#X connect 16 0 17 2;
+#X connect 17 0 3 0;
+#X connect 21 0 23 0;
+#X connect 21 0 27 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 23 0 3 0;
+#X connect 25 0 11 0;
+#X connect 26 0 12 0;
+#X connect 27 0 25 0;
+#X connect 27 0 26 0;
+#X coords 0 -1 1 1 162 138 1 0 0;
